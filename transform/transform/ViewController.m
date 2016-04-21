@@ -38,8 +38,11 @@
     // 角度是正数:顺时针, 角度是负数:逆时针
 #pragma mark 旋转
     //    head.transform = CGAffineTransformMakeRotation(-M_PI_4);  //-M_PI_4：为四分之π
+    
 #pragma mark 在当前的基础上旋转
-    head.transform = CGAffineTransformRotate(head.transform, M_PI_4);//在当前的head.transform的基础上再旋转
+    [UIView animateWithDuration:2.0 animations:^{
+          head.transform = CGAffineTransformRotate(head.transform, M_PI_4);//在当前的head.transform的基础上再旋转
+    }];
 
 }
 
@@ -50,7 +53,10 @@
     // 2.每次向上移动100的距离
     //    head.transform = CGAffineTransformMakeTranslation(0, -100);//平移 不能叠加
 #pragma mark  在当前的基础上平移
-    head.transform = CGAffineTransformTranslate(head.transform, 0, -100);//在当前的head.transform的基础上平移
+    [UIView animateWithDuration:2.0 animations:^{
+         head.transform = CGAffineTransformTranslate(head.transform, 0, -100);//在当前的head.transform的基础上平移
+    }];
+   
 }
 
 - (IBAction)big:(id)sender {
@@ -60,7 +66,10 @@
     // 2.增大（把宽度和高度都设置得比1大，如：1.5, 1.5），如果要减小则可以把宽度和高度都设置来比1小即可，比如：0.9，0.7）
     //    head.transform = CGAffineTransformMakeScale(1.5, 1.5);//宽度和高度缩放比例
 #pragma mark 在当前的基础上缩放
-    head.transform = CGAffineTransformScale(head.transform, 1.5, 1.5);//在当前的head.transform的基础上缩放
+    [UIView animateWithDuration:2.0 animations:^{
+        head.transform = CGAffineTransformScale(head.transform, 1.5, 1.5);//在当前的head.transform的基础上缩放
+    }];
+    
 
 }
 @end
