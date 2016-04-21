@@ -53,7 +53,7 @@
     // 2.每次向上移动100的距离
     //    head.transform = CGAffineTransformMakeTranslation(0, -100);//平移 不能叠加
 #pragma mark  在当前的基础上平移
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:1.0 animations:^{
          head.transform = CGAffineTransformTranslate(head.transform, 0, -100);//在当前的head.transform的基础上平移
     }];
    
